@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masterplan FX - Professional Forex Trading Signals</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        midnight: {
+                            900: '#0a0e1f',
+                            800: '#0f172a',
+                            700: '#1e293b',
+                            600: '#334155',
+                            500: '#475569',
+                        },
+                        copper: {
+                            400: '#b87333',
+                            500: '#cd7f32',
+                            600: '#d4af37',
+                        },
+                        slate: {
+                            850: '#151f32',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'shimmer': 'shimmer 2s linear infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        shimmer: {
+                            '0%': { backgroundPosition: '-1000px 0' },
+                            '100%': { backgroundPosition: '1000px 0' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0e1f;
+        }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #d4af37 0%, #b87333 50%, #d4af37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% auto;
+            animation: shine 5s linear infinite;
+        }
+        
+        @keyframes shine {
+            to { background-position: 200% center; }
+        }
+        
+        .glass-midnight {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+        
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 20px rgba(212, 175, 55, 0.1);
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+        
+        .copper-glow {
+            box-shadow: 0 0 20px rgba(184, 115, 51, 0.3);
+        }
+        
+        .midnight-gradient {
+            background: linear-gradient(135deg, #0a0e1f 0%, #1e293b 100%);
+        }
+        
+        .copper-border-gradient {
+            border-image: linear-gradient(135deg, #b87333, #d4af37, #b87333) 1;
+        }
+        
+        .text-shadow {
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+        
+        .grid-pattern {
+            background-image: radial-gradient(rgba(212, 175, 55, 0.1) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        .broker-card {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .broker-card:hover {
+            border-color: rgba(212, 175, 55, 0.5);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .social-btn {
+            transition: all 0.3s ease;
+        }
+
+        .social-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-midnight-900 text-slate-200 overflow-x-hidden selection:bg-copper-500 selection:text-midnight-900">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-midnight border-b border-copper-400/20 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-3 group cursor-pointer">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-copper-400 to-copper-600 flex items-center justify-center transform group-hover:rotate-12 transition-transform">
+                        <i class="fas fa-chess-king text-midnight-900 text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-2xl font-serif font-bold text-white tracking-wide">Masterplan</span>
+                        <span class="text-copper-400 font-bold text-xl">FX</span>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="text-slate-300 hover:text-copper-400 transition-colors text-sm font-medium tracking-wide uppercase">Features</a>
+                    <a href="#how-it-works" class="text-slate-300 hover:text-copper-400 transition-colors text-sm font-medium tracking-wide uppercase">Methodology</a>
+                    <a href="#pricing" class="text-slate-300 hover:text-copper-400 transition-colors text-sm font-medium tracking-wide uppercase">Investment</a>
+                    <a href="#testimonials" class="text-slate-300 hover:text-copper-400 transition-colors text-sm font-medium tracking-wide uppercase">Results</a>
+                    <a href="#brokers" class="text-slate-300 hover:text-copper-400 transition-colors text-sm font-medium tracking-wide uppercase">Brokers</a>
+                </div>
+                
+                <a href="#" data-action="open-login" class="bg-gradient-to-r from-copper-500 to-copper-400 hover:from-copper-400 hover:to-copper-500 text-midnight-900 px-6 py-2.5 rounded-sm font-bold text-sm tracking-wide transition-all transform hover:scale-105 shadow-lg shadow-copper-500/20">
+                    ACCESS PLATFORM
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden grid-pattern">
+        <!-- Ambient Background Effects -->
+        <div class="absolute inset-0 bg-gradient-to-b from-midnight-800/50 to-midnight-900"></div>
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-copper-500/10 rounded-full blur-[120px] animate-pulse-slow"></div>
+        <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-900/20 rounded-full blur-[100px] animate-pulse-slow" style="animation-delay: 2s;"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8">
+                    <div class="inline-flex items-center space-x-2 bg-copper-500/10 border border-copper-400/30 rounded-sm px-4 py-2">
+                        <span class="flex h-2 w-2 rounded-full bg-copper-400 animate-pulse"></span>
+                        <span class="text-xs font-semibold text-copper-400 tracking-widest uppercase">Live Market Execution</span>
+                    </div>
+                    
+                    <h1 class="text-5xl lg:text-7xl font-serif font-bold leading-tight text-shadow">
+                        Execute Your <br>
+                        <span class="gradient-text">Masterplan</span>
+                    </h1>
+                    
+                    <p class="text-lg text-slate-400 max-w-lg leading-relaxed border-l-2 border-copper-400 pl-6">
+                        Institutional-grade forex signals engineered for consistent profitability. Join elite traders who leverage our proprietary algorithms and expert market analysis.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <a href="#" data-action="open-login" class="group bg-gradient-to-r from-copper-500 to-copper-400 text-midnight-900 px-8 py-4 rounded-sm font-bold tracking-wide transition-all transform hover:scale-105 shadow-xl shadow-copper-500/20 flex items-center justify-center space-x-3">
+                            <span>INITIATE SEQUENCE</span>
+                            <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@masterplanfinancialtraders" target="_blank" class="border border-slate-600 hover:border-copper-400 text-slate-300 hover:text-copper-400 px-8 py-4 rounded-sm font-semibold tracking-wide transition-all flex items-center justify-center space-x-3 group">
+                            <i class="fab fa-youtube text-copper-400 group-hover:scale-110 transition-transform"></i>
+                            <span>WATCH CHANNEL</span>
+                        </a>
+                    </div>
+                    
+                    <div class="flex items-center space-x-6 pt-6 text-xs text-slate-500 uppercase tracking-widest">
+                        <div class="flex -space-x-3">
+                            <img class="w-10 h-10 rounded-full border-2 border-midnight-900 grayscale hover:grayscale-0 transition-all" src="https://i.pravatar.cc/100?img=11" alt="">
+                            <img class="w-10 h-10 rounded-full border-2 border-midnight-900 grayscale hover:grayscale-0 transition-all" src="https://i.pravatar.cc/100?img=12" alt="">
+                            <img class="w-10 h-10 rounded-full border-2 border-midnight-900 grayscale hover:grayscale-0 transition-all" src="https://i.pravatar.cc/100?img=13" alt="">
+                            <div class="w-10 h-10 rounded-full border-2 border-midnight-900 bg-copper-500/20 flex items-center justify-center text-copper-400 font-bold text-xs">+2k</div>
+                        </div>
+                        <span class="text-slate-400">Elite Traders Active</span>
+                    </div>
+                </div>
+                
+                <!-- Phone Mockup -->
+                <div class="relative flex justify-center lg:justify-end">
+                    <div class="relative w-80 h-[650px] bg-midnight-800 rounded-[2.5rem] border-4 border-slate-700 shadow-2xl shadow-black/50 animate-float overflow-hidden">
+                        <!-- Notch -->
+                        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-7 bg-midnight-900 rounded-b-2xl z-20"></div>
+                        
+                        <!-- Screen Content -->
+                        <div class="h-full bg-midnight-900 p-6 pt-12 overflow-hidden relative">
+                            <!-- Status Bar -->
+                            <div class="flex justify-between text-xs text-slate-500 mb-6 px-2">
+                                <span>9:41</span>
+                                <div class="flex space-x-1">
+                                    <i class="fas fa-signal"></i>
+                                    <i class="fas fa-wifi"></i>
+                                    <i class="fas fa-battery-full"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- App Header -->
+                            <div class="flex justify-between items-center mb-6">
+                                <div>
+                                    <p class="text-xs text-copper-400 uppercase tracking-widest">Portfolio</p>
+                                    <p class="text-2xl font-bold text-white">$24,592.00</p>
+                                </div>
+                                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-copper-400 to-copper-600 flex items-center justify-center">
+                                    <i class="fas fa-user text-midnight-900 text-sm"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Signal Card 1 -->
+                            <div class="bg-gradient-to-br from-midnight-800 to-midnight-700 rounded-xl p-4 mb-4 border-l-4 border-green-500 shadow-lg">
+                                <div class="flex justify-between items-start mb-3">
+                                    <div>
+                                        <p class="text-xs text-slate-400 uppercase tracking-wider">EUR/USD</p>
+                                        <p class="text-xl font-bold text-green-400 font-serif">BUY 1.0845</p>
+                                    </div>
+                                    <span class="bg-green-500/20 text-green-400 text-xs px-2 py-1 rounded-sm font-semibold">ACTIVE</span>
+                                </div>
+                                <div class="grid grid-cols-2 gap-2 text-xs">
+                                    <div class="bg-midnight-900/50 p-2 rounded">
+                                        <p class="text-slate-500">TP</p>
+                                        <p class="text-slate-300 font-semibold">1.0890</p>
+                                    </div>
+                                    <div class="bg-midnight-900/50 p-2 rounded">
+                                        <p class="text-slate-500">SL</p>
+                                        <p class="text-slate-300 font-semibold">1.0820</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Signal Card 2 -->
+                            <div class="bg-gradient-to-br from-midnight-800 to-midnight-700 rounded-xl p-4 mb-4 border-l-4 border-copper-400 shadow-lg">
+                                <div class="flex justify-between items-start mb-3">
+                                    <div>
+                                        <p class="text-xs text-slate-400 uppercase tracking-wider">GBP/USD</p>
+                                        <p class="text-xl font-bold text-copper-400 font-serif">SELL 1.2650</p>
+                                    </div>
+                                    <span class="bg-copper-500/20 text-copper-400 text-xs px-2 py-1 rounded-sm font-semibold">NEW</span>
+                                </div>
+                                <div class="grid grid-cols-2 gap-2 text-xs">
+                                    <div class="bg-midnight-900/50 p-2 rounded">
+                                        <p class="text-slate-500">TP</p>
+                                        <p class="text-slate-300 font-semibold">1.2600</p>
+                                    </div>
+                                    <div class="bg-midnight-900/50 p-2 rounded">
+                                        <p class="text-slate-500">SL</p>
+                                        <p class="text-slate-300 font-semibold">1.2680</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Performance Card -->
+                            <div class="bg-gradient-to-r from-copper-500 to-copper-400 rounded-xl p-4 text-midnight-900">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <p class="text-xs font-semibold opacity-80 uppercase">Today's P&L</p>
+                                        <p class="text-3xl font-bold font-serif">+342 PIPS</p>
+                                    </div>
+                                    <i class="fas fa-chart-line text-3xl opacity-50"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- Bottom Nav -->
+                            <div class="absolute bottom-0 left-0 right-0 bg-midnight-800 border-t border-slate-700 p-4 flex justify-around">
+                                <i class="fas fa-home text-copper-400 text-xl"></i>
+                                <i class="fas fa-chart-bar text-slate-600 text-xl"></i>
+                                <i class="fas fa-newspaper text-slate-600 text-xl"></i>
+                                <i class="fas fa-cog text-slate-600 text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Decorative Elements -->
+                    <div class="absolute -top-10 -right-10 w-32 h-32 bg-copper-500/20 rounded-full blur-2xl"></div>
+                    <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-blue-900/20 rounded-full blur-3xl"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Hub -->
+    <section class="py-16 bg-midnight-800/30 border-y border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <p class="text-copper-400 text-sm tracking-[0.3em] uppercase mb-4">Connect With Us</p>
+                <h2 class="text-3xl font-serif font-bold text-white mb-4">Join Our Network</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Access real-time updates, market analysis, and exclusive content across all platforms</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+                <a href="https://www.youtube.com/@masterplanfinancialtraders" target="_blank" class="social-btn bg-red-600/20 border border-red-500/30 hover:bg-red-600/30 rounded-lg p-4 text-center group">
+                    <i class="fab fa-youtube text-3xl text-red-500 mb-2 group-hover:scale-110 transition-transform block"></i>
+                    <span class="text-xs text-slate-300 font-medium">YouTube</span>
+                </a>
+                
+                <a href="https://x.com/AlleianAtoz" target="_blank" class="social-btn bg-slate-700/50 border border-slate-600 hover:bg-slate-600/50 rounded-lg p-4 text-center group">
+                    <i class="fab fa-x-twitter text-3xl text-white mb-2 group-hover:scale-110 transition-transform block"></i>
+                    <span class="text-xs text-slate-300 font-medium">X/Twitter</span>
+                </a>
+                
+                <a href="https://www.linkedin.com/in/mastermind-financial-traders-98b49a323" target="_blank" class="social-btn bg-blue-700/20 border border-blue-500/30 hover:bg-blue-700/30 rounded-lg p-4 text-center group">
+                    <i class="fab fa-linkedin-in text-3xl text-blue-400 mb-2 group-hover:scale-110 transition-transform block"></i>
+                    <span class="text-xs text-slate-300 font-medium">LinkedIn</span>
+                </a>
+                
+                <a href="https://www.tiktok.com/@_account_manager" target="_blank" class="social-btn bg-pink-600/20 border border-pink-500/30 hover:bg-pink-600/30 rounded-lg p-4 text-center group">
+                    <i class="fab fa-tiktok text-3xl text-pink-400 mb-2 group-hover:scale-110 transition-transform block"></i>
+                    <span class="text-xs text-slate-300 font-medium">TikTok</span>
+                </a>
+                
+                <a href="https://chat.whatsapp.com/Kbr8wAI9Kbh9kp7wX60Jnw" target="_blank" class="social-btn bg-green-600/20 border border-green-500/30 hover:bg-green-600/30 rounded-lg p-4 text-center group">
+                    <i class="fab fa-whatsapp text-3xl text-green-400 mb-2 group-hover:scale-110 transition-transform block"></i>
+                    <span class="text-xs text-slate-300 font-medium">WhatsApp</span>
+                </a>
+                
+                <a href="https://t.me/mastermindfinancialtraders" target="_blank" class="social-btn bg-blue-500/20 border border-blue-400/30 hover:bg-blue-500/30 rounded-lg p-4 text-center group">
+                    <i class="fab fa-telegram text-3xl text-blue-400 mb-2 group-hover:scale-110 transition-transform block"></i>
+                    <span class="text-xs text-slate-300 font-medium">Telegram</span>
+                </a>
+                
+                <a href="mailto:ops@masterplanfx.com" class="social-btn bg-copper-500/20 border border-copper-400/30 hover:bg-copper-500/30 rounded-lg p-4 text-center group">
+                    <i class="fas fa-envelope text-3xl text-copper-400 mb-2 group-hover:scale-110 transition-transform block"></i>
+                    <span class="text-xs text-slate-300 font-medium">Email</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Broker Partners Section -->
+    <section id="brokers" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <p class="text-copper-400 text-sm tracking-[0.3em] uppercase mb-4">Partners</p>
+                <h2 class="text-4xl font-serif font-bold text-white mb-4">Start Trading Today</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Open an account with our trusted broker partners and receive virtual funds to practice your strategies</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Exness -->
+                <a href="https://one.exnessonelink.com/a/x4is06sz7y?source=app" target="_blank" class="broker-card rounded-xl p-8 block group">
+                    <div class="flex items-start justify-between mb-6">
+                        <div class="w-16 h-16 bg-yellow-500 rounded-lg flex items-center justify-center">
+                            <span class="text-midnight-900 font-bold text-2xl">E</span>
+                        </div>
+                        <span class="bg-yellow-500/20 text-yellow-400 text-xs px-3 py-1 rounded-full font-semibold">$10,000 Virtual</span>
+                    </div>
+                    <h3 class="text-2xl font-serif font-bold text-white mb-2 group-hover:text-copper-400 transition-colors">Exness</h3>
+                    <p class="text-slate-400 text-sm mb-4">Receive $10,000 in virtual funds and learn how to trade with a market leader. Industry-leading spreads and instant withdrawals.</p>
+                    <div class="flex items-center text-copper-400 text-sm font-semibold group-hover:translate-x-2 transition-transform">
+                        <span>Open Account</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </a>
+                
+                <!-- Deriv -->
+                <a href="https://track.deriv.com/_Ish45wC1NlAIMV8JnZ5O5GNd7ZgqdRLk/1" target="_blank" class="broker-card rounded-xl p-8 block group">
+                    <div class="flex items-start justify-between mb-6">
+                        <div class="w-16 h-16 bg-red-600 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-2xl">D</span>
+                        </div>
+                        <span class="bg-red-500/20 text-red-400 text-xs px-3 py-1 rounded-full font-semibold">Regulated</span>
+                    </div>
+                    <h3 class="text-2xl font-serif font-bold text-white mb-2 group-hover:text-copper-400 transition-colors">Deriv</h3>
+                    <p class="text-slate-400 text-sm mb-4">Trade forex, indices, commodities and more with a trusted regulated broker. Advanced trading platforms and competitive conditions.</p>
+                    <div class="flex items-center text-copper-400 text-sm font-semibold group-hover:translate-x-2 transition-transform">
+                        <span>Open Account</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Message -->
+    <section class="py-24 bg-midnight-800/30 relative">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-copper-500/5 via-transparent to-transparent"></div>
+        <div class="max-w-4xl mx-auto px-4 relative z-10">
+            <div class="text-center mb-16">
+                <p class="text-copper-400 text-sm tracking-[0.3em] uppercase mb-4">Leadership</p>
+                <h2 class="text-4xl font-serif font-bold text-white">Strategic Vision</h2>
+            </div>
+            
+            <div class="glass-midnight rounded-sm p-10 lg:p-16 relative border border-copper-400/20">
+                <i class="fas fa-quote-left text-6xl text-copper-400/10 absolute top-8 left-8"></i>
+                <div class="relative z-10">
+                    <p class="text-xl lg:text-2xl text-slate-300 italic mb-10 leading-relaxed font-light">
+                        "True mastery in trading is not about predicting the future—it's about executing a flawless plan when opportunity presents itself. Our algorithms don't guess; they calculate. Our analysts don't hope; they verify. This is the Masterplan difference."
+                    </p>
+                    <div class="flex items-center justify-center space-x-6">
+                        <img src="https://i.pravatar.cc/150?img=11" alt="Founder" class="w-20 h-20 rounded-full border-2 border-copper-400 grayscale hover:grayscale-0 transition-all">
+                        <div class="text-left">
+                            <p class="font-serif font-bold text-xl text-white">Alexander Sterling</p>
+                            <p class="text-copper-400 text-sm tracking-widest uppercase">Founder & Chief Strategist</p>
+                            <p class="text-slate-500 text-xs mt-1">Former Goldman Sachs FX Director</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <p class="text-copper-400 text-sm tracking-[0.3em] uppercase mb-4">Process</p>
+                <h2 class="text-4xl font-serif font-bold text-white mb-4">The Masterplan Protocol</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Five phases of execution designed for optimal market entry and risk management</p>
+            </div>
+            
+            <div class="grid md:grid-cols-5 gap-6 relative">
+                <!-- Connecting Line -->
+                <div class="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-copper-400/30 to-transparent -translate-y-1/2 z-0"></div>
+                
+                <div class="relative z-10 group">
+                    <div class="bg-midnight-800 border border-slate-700 rounded-sm p-6 text-center card-hover h-full group-hover:border-copper-400/50">
+                        <div class="w-14 h-14 bg-gradient-to-br from-copper-400 to-copper-600 rounded-sm flex items-center justify-center mx-auto mb-6 text-midnight-900 font-bold text-xl shadow-lg shadow-copper-500/20">01</div>
+                        <i class="fas fa-download text-3xl text-copper-400 mb-4 group-hover:scale-110 transition-transform"></i>
+                        <h3 class="font-serif font-bold text-lg mb-2 text-white">Acquisition</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed">Download the Masterplan terminal from your preferred app marketplace</p>
+                    </div>
+                </div>
+                
+                <div class="relative z-10 group">
+                    <div class="bg-midnight-800 border border-slate-700 rounded-sm p-6 text-center card-hover h-full group-hover:border-copper-400/50">
+                        <div class="w-14 h-14 bg-gradient-to-br from-copper-400 to-copper-600 rounded-sm flex items-center justify-center mx-auto mb-6 text-midnight-900 font-bold text-xl shadow-lg shadow-copper-500/20">02</div>
+                        <i class="fas fa-fingerprint text-3xl text-copper-400 mb-4 group-hover:scale-110 transition-transform"></i>
+                        <h3 class="font-serif font-bold text-lg mb-2 text-white">Verification</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed">Secure onboarding with institutional-grade KYC protocols</p>
+                    </div>
+                </div>
+                
+                <div class="relative z-10 group">
+                    <div class="bg-midnight-800 border border-slate-700 rounded-sm p-6 text-center card-hover h-full group-hover:border-copper-400/50">
+                        <div class="w-14 h-14 bg-gradient-to-br from-copper-400 to-copper-600 rounded-sm flex items-center justify-center mx-auto mb-6 text-midnight-900 font-bold text-xl shadow-lg shadow-copper-500/20">03</div>
+                        <i class="fas fa-crown text-3xl text-copper-400 mb-4 group-hover:scale-110 transition-transform"></i>
+                        <h3 class="font-serif font-bold text-lg mb-2 text-white">Activation</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed">Select your investment tier and activate signal access</p>
+                    </div>
+                </div>
+                
+                <div class="relative z-10 group">
+                    <div class="bg-midnight-800 border border-slate-700 rounded-sm p-6 text-center card-hover h-full group-hover:border-copper-400/50">
+                        <div class="w-14 h-14 bg-gradient-to-br from-copper-400 to-copper-600 rounded-sm flex items-center justify-center mx-auto mb-6 text-midnight-900 font-bold text-xl shadow-lg shadow-copper-500/20">04</div>
+                        <i class="fas fa-satellite-dish text-3xl text-copper-400 mb-4 group-hover:scale-110 transition-transform"></i>
+                        <h3 class="font-serif font-bold text-lg mb-2 text-white">Execution</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed">Receive real-time signals with precise entry and exit parameters</p>
+                    </div>
+                </div>
+                
+                <div class="relative z-10 group">
+                    <div class="bg-midnight-800 border border-slate-700 rounded-sm p-6 text-center card-hover h-full group-hover:border-copper-400/50">
+                        <div class="w-14 h-14 bg-gradient-to-br from-copper-400 to-copper-600 rounded-sm flex items-center justify-center mx-auto mb-6 text-midnight-900 font-bold text-xl shadow-lg shadow-copper-500/20">05</div>
+                        <i class="fas fa-users text-3xl text-copper-400 mb-4 group-hover:scale-110 transition-transform"></i>
+                        <h3 class="font-serif font-bold text-lg mb-2 text-white">Syndicate</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed">Join the private intelligence network for strategic discussions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Risk Management -->
+    <section class="py-24 bg-midnight-800/20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-20">
+                <p class="text-copper-400 text-sm tracking-[0.3em] uppercase mb-4">Risk Protocol</p>
+                <h2 class="text-4xl font-serif font-bold text-white mb-4">Capital Preservation Matrix</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Institutional risk management frameworks adapted for individual traders</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <div class="bg-midnight-800/50 border-t-4 border-red-500 rounded-sm p-8 card-hover group">
+                    <div class="text-5xl font-serif font-bold text-red-400/80 mb-4 group-hover:text-red-400 transition-colors">2%</div>
+                    <h3 class="font-bold text-white mb-2 tracking-wide uppercase text-sm">Maximum Exposure</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Never allocate more than 2% of total capital to a single position</p>
+                </div>
+                
+                <div class="bg-midnight-800/50 border-t-4 border-copper-400 rounded-sm p-8 card-hover group">
+                    <div class="text-5xl font-serif font-bold text-copper-400/80 mb-4 group-hover:text-copper-400 transition-colors">3:1</div>
+                    <h3 class="font-bold text-white mb-2 tracking-wide uppercase text-sm">Risk-Reward Ratio</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Minimum 3:1 reward-to-risk ratio on all recommended setups</p>
+                </div>
+                
+                <div class="bg-midnight-800/50 border-t-4 border-yellow-500 rounded-sm p-8 card-hover group">
+                    <div class="text-5xl font-serif font-bold text-yellow-400/80 mb-4 group-hover:text-yellow-400 transition-colors">5%</div>
+                    <h3 class="font-bold text-white mb-2 tracking-wide uppercase text-sm">Daily Drawdown Limit</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Automatic circuit breakers trigger at 5% daily portfolio decline</p>
+                </div>
+                
+                <div class="bg-midnight-800/50 border-t-4 border-green-500 rounded-sm p-8 card-hover group">
+                    <div class="text-5xl font-serif font-bold text-green-400/80 mb-4 group-hover:text-green-400 transition-colors">48h</div>
+                    <h3 class="font-bold text-white mb-2 tracking-wide uppercase text-sm">Recovery Protocol</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Mandatory 48-hour stand-down after three consecutive losses</p>
+                </div>
+            </div>
+            
+            <div class="bg-gradient-to-r from-red-900/20 to-midnight-800 border-l-4 border-red-500 rounded-sm p-8">
+                <h3 class="text-xl font-serif font-bold text-white mb-4 flex items-center">
+                    <i class="fas fa-shield-alt text-red-500 mr-3"></i>
+                    Risk Disclosure
+                </h3>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Foreign exchange trading carries substantial risk of loss and is not suitable for all investors. Past performance of our signals is not indicative of future results. Leverage can amplify both gains and losses. Only risk capital that you can afford to lose. Masterplan FX provides educational and informational content only—not financial advice. Consult with a qualified financial advisor before making investment decisions.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <p class="text-copper-400 text-sm tracking-[0.3em] uppercase mb-4">Investment Tiers</p>
+                <h2 class="text-4xl font-serif font-bold text-white mb-4">Select Your Access Level</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">All tiers include premium signals. Duration determines your commitment level.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <!-- 1 Month -->
+                <div class="bg-midnight-800 border border-slate-700 rounded-sm p-6 card-hover flex flex-col relative group">
+                    <div class="absolute inset-0 bg-gradient-to-b from-copper-400/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-sm"></div>
+                    <h3 class="text-lg font-serif font-bold text-white mb-2 relative z-10">Initiate</h3>
+                    <p class="text-xs text-slate-500 mb-6 uppercase tracking-wider relative z-10">1 Month Access</p>
+                    <div class="text-4xl font-serif font-bold text-copper-400 mb-6 relative z-10">$49</div>
+                    <ul class="space-y-3 mb-8 flex-grow text-sm text-slate-400 relative z-10">
+                        <li class="flex items-center"><i class="fas fa-check text-copper-400 mr-3 text-xs"></i>3-5 Signals Daily</li>
+                        <li class="flex items-center"><i class="fas fa-check text-copper-400 mr-3 text-xs"></i>Major Pairs Only</li>
+                        <li class="flex items-center"><i class="fas fa-check text-copper-400 mr-3 text-xs"></i>Email Alerts</li>
+                        <li class="flex items-center"><i class="fas fa-check text-copper-400 mr-3 text-xs"></i>Basic Analytics</li>
+                    </ul>
+                    <a href="#" data-action="open-signup" data-plan="initiate" class="w-full border border-slate-600 hover:border-copper-400 text-slate-300 hover:text-copper-400 py-3 rounded-sm font-semibold text-sm tracking-wide transition-all relative z-10 uppercase text-center">Select</a>
+                </div>
+
+                <!-- 3 Months -->
+                <div class="bg-midnight-800 border border-slate-700 rounded-sm p-6 card-hover flex flex-col relative group">
+                    <div class="absolute inset-0 bg-gradient-to-b from-copper-400/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-sm"></div>
+                    <h3 class="text-lg font-serif font-bold text-white mb-2 relative z-10">Accelerate</h3>
+                    <p class="text-xs text-slate-500 mb-6 uppercase tracking-wider relative z-10">3 Month Access</p>
+                    <div class="text-4xl font-serif font-bold text-copper-400 mb-6 relative z-10">$129</div>
+                    <ul class="space-y-3 mb-8 flex-grow text-sm text-slate-400 relative z-10">
+                        <li class="flex items-center"><i class="fas fa-check text-copper-400 mr-3 text-xs"></i>3-5 Signals Daily</li>
+                        <li class="flex items-center"><i class="fas fa-check text-copper-400 mr-3 text-xs"></i>Major & Minor Pairs</li>
+                        <li class="flex items-center"><i class="fas fa-check text-copper-400 mr-3 text-xs"></i>Push Notifications</li>
+                        <li class="flex items-center"><i class="fas fa-check text-copper-400 mr-3 text-xs"></i>Weekly Reports</li>
+                    </ul>
+                    <a href="#" data-action="open-signup" data-plan="accelerate" class="w-full border border-slate-600 hover:border-copper-400 text-slate-300 hover:text-copper-400 py-3 rounded-sm font-semibold text-sm tracking-wide transition-all relative z-10 uppercase text-center">Select</a>
+                </div>
+
+                <!-- 6 Months - Popular -->
+                <div class="bg-gradient-to-b from-midnight-700 to-midnight-800 border-2 border-copper-400 rounded-sm p-6 card-hover flex flex-col relative transform scale-105 shadow-2xl shadow-copper-500/10">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-copper-400 to-copper-600 text-midnight-900 px-4 py-1 rounded-sm text-xs font-bold tracking-widest uppercase shadow-lg">Recommended</div>
+                    <h3 class="text-lg font-serif font-bold text-white mb-2">Optimize</h3>
+                    <p class="text-xs text-copper-400 mb-6 uppercase tracking-wider">6 Month Access</p>
+                    <div class="text-4xl font-serif font-bold text-white mb-6">$199</div>
+                    <ul class="space-y-3 mb-8 flex-grow text-sm text-slate-300">
+                        <li class="flex items-center"><i class="fas fa-check text-copper-400 mr-3 text-xs"></i>5-7 Signals Daily</li>
+                        <li class="flex items-center"><i class="fas fa-check text-copper-400 mr-3 text-xs"></i>All Currency Pairs</li>
+                        <li class="flex items-center"><i class="fas fa-check text-copper-400 mr-3 text-xs"></i>Priority Execution</li>
+                        <li class="flex items-center"><i class="fas fa-check text-copper-400 mr-3 text-xs"></i>Risk Management Tools</li>
+                        <li class="flex items-center"><i class="fas fa-check text-copper-400 mr-3 text-xs"></i>Discord Community</li>
+                    </ul>
+                    <a href="#" data-action="open-signup" data-plan="optimize" class="w-full bg-gradient-to-r from-copper-500 to-copper-400 hover:from-copper-400 hover:to-copper-500 text-midnight-900 py-3 rounded-sm font-bold text-sm tracking-wide transition-all shadow-lg shadow-copper-500/20 uppercase text-center">Select Plan</a>
+                </div>
+
+                <!-- 12 Months -->
+                <div class="bg-midnight-800 border border-slate-700 rounded-sm p-6 card-hover flex flex-col relative group">
+                    <div class="absolute inset-0 bg-gradient-to-b from-copper-400/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-sm"></div>
+                    <h3 class="text-lg font-serif font-bold text-white mb-2 relative z-10">Dominate</h3>
+                    <p class="text-xs text-slate-500 mb-6 uppercase tracking-wider relative z-10">12 Month Access</p>
+                    <div class="text-4xl font-serif font-bold text-copper-400 mb-6 relative z-10">$349</div>
+                    <ul class="space-y-3 mb-8 flex-grow text-sm text-slate-400 relative z-10">
+                        <li class="flex items-center"><i class="fas fa-check text-copper-400 mr-3 text-xs"></i>Unlimited Signals</li>
+                        <li class="flex items-center"><i class="fas fa-check text-copper-400 mr-3 text-xs"></i>Commodities & Indices</li>
+                        <li class="flex items-center"><i class="fas fa-check text-copper-400 mr-3 text-xs"></i>1-on-1 Strategy Calls</li>
+                        <li class="flex items-center"><i class="fas fa-check text-copper-400 mr-3 text-xs"></i>Custom Alerts</li>
+                    </ul>
+                    <a href="#" data-action="open-signup" data-plan="dominate" class="w-full border border-slate-600 hover:border-copper-400 text-slate-300 hover:text-copper-400 py-3 rounded-sm font-semibold text-sm tracking-wide transition-all relative z-10 uppercase text-center">Select</a>
+                </div>
+
+                <!-- Lifetime -->
+                <div class="bg-midnight-800 border-2 border-copper-400/50 rounded-sm p-6 card-hover flex flex-col relative group overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-copper-400/10 via-transparent to-copper-400/10 opacity-50"></div>
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-copper-400/10 rounded-bl-full"></div>
+                    <h3 class="text-lg font-serif font-bold text-copper-400 mb-2 relative z-10">Sovereign</h3>
+                    <p class="text-xs text-copper-400/80 mb-6 uppercase tracking-wider relative z-10">Lifetime Access</p>
+                    <div class="text-4xl font-serif font-bold text-white mb-6 relative z-10">$599</div>
+                    <ul class="space-y-3 mb-8 flex-grow text-sm text-slate-300 relative z-10">
+                        <li class="flex items-center"><i class="fas fa-crown text-copper-400 mr-3 text-xs"></i>Perpetual Access</li>
+                        <li class="flex items-center"><i class="fas fa-crown text-copper-400 mr-3 text-xs"></i>All Future Updates</li>
+                        <li class="flex items-center"><i class="fas fa-crown text-copper-400 mr-3 text-xs"></i>VIP Support Channel</li>
+                        <li class="flex items-center"><i class="fas fa-crown text-copper-400 mr-3 text-xs"></i>Annual Strategy Review</li>
+                    </ul>
+                    <a href="#" data-action="open-signup" data-plan="sovereign" class="w-full bg-copper-400/20 hover:bg-copper-400/30 border border-copper-400 text-copper-400 py-3 rounded-sm font-bold text-sm tracking-wide transition-all relative z-10 uppercase text-center">Select</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="py-24 bg-midnight-800/30 border-y border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+                <div class="group">
+                    <div class="text-5xl lg:text-6xl font-serif font-bold text-copper-400 mb-2 counter" data-target="2500">0</div>
+                    <p class="text-slate-400 text-sm tracking-widest uppercase group-hover:text-copper-400 transition-colors">Active Strategists</p>
+                </div>
+                <div class="group">
+                    <div class="text-5xl lg:text-6xl font-serif font-bold text-copper-400 mb-2 counter" data-target="89">0</div>
+                    <p class="text-slate-400 text-sm tracking-widest uppercase group-hover:text-copper-400 transition-colors">Win Rate %</p>
+                </div>
+                <div class="group">
+                    <div class="text-5xl lg:text-6xl font-serif font-bold text-copper-400 mb-2 counter" data-target="1240">0</div>
+                    <p class="text-slate-400 text-sm tracking-widest uppercase group-hover:text-copper-400 transition-colors">Signals Monthly</p>
+                </div>
+                <div class="group">
+                    <div class="text-5xl lg:text-6xl font-serif font-bold text-copper-400 mb-2 counter" data-target="42">0</div>
+                    <p class="text-slate-400 text-sm tracking-widest uppercase group-hover:text-copper-400 transition-colors">Countries</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <p class="text-copper-400 text-sm tracking-[0.3em] uppercase mb-4">Intelligence Reports</p>
+                <h2 class="text-4xl font-serif font-bold text-white mb-4">Operator Testimonials</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Verified performance reports from our global network</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-midnight-800 border border-slate-700 rounded-sm p-8 card-hover relative">
+                    <div class="flex text-copper-400 mb-6 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-slate-300 mb-8 leading-relaxed italic">"The precision of these signals is unmatched. After six months following the Masterplan protocols, my account has appreciated 47%. The risk management discipline alone transformed my approach to markets."</p>
+                    <div class="flex items-center border-t border-slate-700 pt-6">
+                        <img src="https://i.pravatar.cc/150?img=60" class="w-12 h-12 rounded-full border border-copper-400/30 mr-4 grayscale">
+                        <div>
+                            <p class="font-serif font-bold text-white">James Worthington</p>
+                            <p class="text-xs text-copper-400 uppercase tracking-wider">Portfolio Manager, London</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-midnight-800 border border-slate-700 rounded-sm p-8 card-hover relative">
+                    <div class="flex text-copper-400 mb-6 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-slate-300 mb-8 leading-relaxed italic">"Finally, a signal service that treats trading like a business, not gambling. The 3:1 risk-reward minimums and strict drawdown limits have preserved my capital through volatile conditions."</p>
+                    <div class="flex items-center border-t border-slate-700 pt-6">
+                        <img src="https://i.pravatar.cc/150?img=32" class="w-12 h-12 rounded-full border border-copper-400/30 mr-4 grayscale">
+                        <div>
+                            <p class="font-serif font-bold text-white">Elena Vasquez</p>
+                            <p class="text-xs text-copper-400 uppercase tracking-wider">Independent Trader, Madrid</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-midnight-800 border border-slate-700 rounded-sm p-8 card-hover relative">
+                    <div class="flex text-copper-400 mb-6 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-slate-300 mb-8 leading-relaxed italic">"Transitioned from a competitor six months ago. The difference in execution quality and analytical depth is remarkable. The Sovereign lifetime access paid for itself within the first quarter."</p>
+                    <div class="flex items-center border-t border-slate-700 pt-6">
+                        <img src="https://i.pravatar.cc/150?img=53" class="w-12 h-12 rounded-full border border-copper-400/30 mr-4 grayscale">
+                        <div>
+                            <p class="font-serif font-bold text-white">Marcus Chen</p>
+                            <p class="text-xs text-copper-400 uppercase tracking-wider">Hedge Fund Analyst, Singapore</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 bg-midnight-800/20">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <p class="text-copper-400 text-sm tracking-[0.3em] uppercase mb-4">Intelligence Briefing</p>
+                <h2 class="text-4xl font-serif font-bold text-white mb-4">Operational FAQs</h2>
+            </div>
+            
+            <div class="space-y-4" id="faq-container">
+                <div class="bg-midnight-800 border border-slate-700 rounded-sm overflow-hidden group">
+                    <button class="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-midnight-700/50 transition-all" onclick="toggleFaq(this)">
+                        <span class="font-serif font-bold text-white text-lg">What distinguishes Masterplan FX from standard signal providers?</span>
+                        <i class="fas fa-plus text-copper-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-slate-400 leading-relaxed border-t border-slate-700 pt-4">
+                        We operate as a strategic intelligence unit rather than a basic alert service. Our signals are generated through confluence of institutional order flow analysis, algorithmic pattern recognition, and macroeconomic validation. Each signal includes specific entry protocols, risk parameters, and position sizing guidelines—not just buy/sell recommendations.
+                    </div>
+                </div>
+                
+                <div class="bg-midnight-800 border border-slate-700 rounded-sm overflow-hidden group">
+                    <button class="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-midnight-700/50 transition-all" onclick="toggleFaq(this)">
+                        <span class="font-serif font-bold text-white text-lg">What is the expected return on investment?</span>
+                        <i class="fas fa-plus text-copper-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-slate-400 leading-relaxed border-t border-slate-700 pt-4">
+                        While our historical performance shows consistent profitability, we do not guarantee specific returns. Trading outcomes depend on market conditions, execution quality, and adherence to risk protocols. Our focus is on sustainable wealth preservation and growth through disciplined risk management, not speculative gains.
+                    </div>
+                </div>
+                
+                <div class="bg-midnight-800 border border-slate-700 rounded-sm overflow-hidden group">
+                    <button class="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-midnight-700/50 transition-all" onclick="toggleFaq(this)">
+                        <span class="font-serif font-bold text-white text-lg">Is prior trading experience required?</span>
+                        <i class="fas fa-plus text-copper-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-slate-400 leading-relaxed border-t border-slate-700 pt-4">
+                        No. Our platform accommodates all experience levels. Beginners benefit from our educational resources and detailed signal explanations, while experienced traders appreciate the advanced analytics and execution precision. We provide comprehensive onboarding for all new strategists.
+                    </div>
+                </div>
+                
+                <div class="bg-midnight-800 border border-slate-700 rounded-sm overflow-hidden group">
+                    <button class="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-midnight-700/50 transition-all" onclick="toggleFaq(this)">
+                        <span class="font-serif font-bold text-white text-lg">What is the cancellation policy?</span>
+                        <i class="fas fa-plus text-copper-400 transition-transform duration-300"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-slate-400 leading-relaxed border-t border-slate-700 pt-4">
+                        Subscriptions can be cancelled at any time with access continuing through the current billing period. We offer a 14-day performance guarantee for new subscribers—if our signals do not meet published benchmarks within the first two weeks, we provide a full refund, no questions asked.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-copper-900/20 via-midnight-900 to-copper-900/20"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-copper-500/10 via-transparent to-transparent"></div>
+        
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h2 class="text-5xl font-serif font-bold text-white mb-6">Execute Your Strategy</h2>
+            <p class="text-xl text-slate-400 mb-12 max-w-2xl mx-auto">Join the network of elite traders who have elevated their market performance through systematic execution.</p>
+            
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                <a href="#" data-action="open-login" class="group bg-gradient-to-r from-copper-500 to-copper-400 text-midnight-900 px-10 py-5 rounded-sm font-bold tracking-wide transition-all transform hover:scale-105 shadow-2xl shadow-copper-500/20 flex items-center justify-center space-x-3">
+                    <span class="uppercase tracking-widest">Begin Operation</span>
+                    <i class="fas fa-chevron-right group-hover:translate-x-1 transition-transform"></i>
+                </a>
+                <a href="https://www.youtube.com/@masterplanfinancialtraders" target="_blank" class="border border-slate-600 hover:border-copper-400 text-slate-300 hover:text-copper-400 px-10 py-5 rounded-sm font-semibold tracking-wide transition-all uppercase tracking-widest flex items-center justify-center space-x-3">
+                    <i class="fab fa-youtube"></i>
+                    <span>View Channel</span>
+                </a>
+            </div>
+            
+            <p class="mt-8 text-xs text-slate-600 uppercase tracking-widest">Secure SSL Encryption • PCI Compliant • 256-bit Data Protection</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-midnight-900 border-t border-slate-800 pt-20 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-8 h-8 rounded-sm bg-gradient-to-br from-copper-400 to-copper-600 flex items-center justify-center">
+                            <i class="fas fa-chess-king text-midnight-900 text-sm"></i>
+                        </div>
+                        <span class="text-xl font-serif font-bold text-white">Masterplan<span class="text-copper-400">FX</span></span>
+                    </div>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6">Institutional-grade forex intelligence for the discerning trader. Precision, discipline, execution.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.youtube.com/@masterplanfinancialtraders" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-red-600 hover:text-white transition-all"><i class="fab fa-youtube"></i></a>
+                        <a href="https://x.com/AlleianAtoz" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-slate-600 hover:text-white transition-all"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/mastermind-financial-traders-98b49a323" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white transition-all"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.tiktok.com/@_account_manager" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-pink-600 hover:text-white transition-all"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-sm">Platform</h4>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li><a href="#" class="hover:text-copper-400 transition-colors">Signal Performance</a></li>
+                        <li><a href="#" class="hover:text-copper-400 transition-colors">Methodology</a></li>
+                        <li><a href="#" class="hover:text-copper-400 transition-colors">Risk Framework</a></li>
+                        <li><a href="#pricing" class="hover:text-copper-400 transition-colors">Pricing Structure</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-sm">Intelligence</h4>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li><a href="https://www.youtube.com/@masterplanfinancialtraders" target="_blank" class="hover:text-copper-400 transition-colors">Market Analysis</a></li>
+                        <li><a href="#" class="hover:text-copper-400 transition-colors">Economic Calendar</a></li>
+                        <li><a href="#" class="hover:text-copper-400 transition-colors">Strategy Guides</a></li>
+                        <li><a href="https://www.youtube.com/@masterplanfinancialtraders" target="_blank" class="hover:text-copper-400 transition-colors">Webinar Archive</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-sm">Command</h4>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li class="flex items-center"><i class="fas fa-envelope text-copper-400 mr-3 w-4"></i> ops@masterplanfx.com</li>
+                        <li class="flex items-center"><i class="fas fa-phone text-copper-400 mr-3 w-4"></i> +1 (555) 234-5678</li>
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt text-copper-400 mr-3 w-4"></i> 1209 Orange Street, Wilmington, DE</li>
+                        <li class="flex items-center mt-4">
+                            <a href="https://chat.whatsapp.com/Kbr8wAI9Kbh9kp7wX60Jnw" target="_blank" class="flex items-center text-green-400 hover:text-green-300 transition-colors">
+                                <i class="fab fa-whatsapp mr-2"></i> Join WhatsApp Group
+                            </a>
+                        </li>
+                        <li class="flex items-center">
+                            <a href="https://t.me/mastermindfinancialtraders" target="_blank" class="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+                                <i class="fab fa-telegram mr-2"></i> Join Telegram Channel
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-600">
+                <p>&copy; 2025 Masterplan FX. All rights reserved.</p>
+                <div class="flex space-x-8 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-copper-400 transition-colors uppercase tracking-wider">Privacy Protocol</a>
+                    <a href="#" class="hover:text-copper-400 transition-colors uppercase tracking-wider">Terms of Engagement</a>
+                    <a href="#" class="hover:text-copper-400 transition-colors uppercase tracking-wider">Risk Disclosure</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal (Improved) -->
+    <div id="loginModal" class="fixed inset-0 bg-midnight-900/90 backdrop-blur-sm flex items-center justify-center z-50 hidden transition-opacity duration-300" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+        <div class="bg-midnight-800 border border-copper-400/30 rounded-lg p-8 max-w-md w-full mx-4 relative shadow-2xl transform transition-all duration-300 scale-95 opacity-0" id="loginModalContent">
+            <button onclick="closeModal('loginModal')" class="absolute top-4 right-4 text-slate-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-copper-400 rounded-sm" aria-label="Close">
+                <i class="fas fa-times text-xl"></i>
+            </button>
+            <h3 id="loginTitle" class="text-2xl font-serif font-bold text-white mb-6">Login to Masterplan</h3>
+            <form id="loginForm" novalidate>
+                <div class="mb-4">
+                    <label for="loginEmail" class="block text-slate-300 text-sm mb-2">Email</label>
+                    <div class="relative">
+                        <i class="fas fa-envelope absolute left-3 top-1/2 -translate-y-1/2 text-copper-400"></i>
+                        <input type="email" id="loginEmail" name="email" autocomplete="email" class="w-full bg-midnight-900 border border-slate-700 rounded-sm pl-10 pr-4 py-3 text-white focus:outline-none focus:border-copper-400 transition-colors" placeholder="you@example.com" required>
+                    </div>
+                    <div id="loginEmailError" class="text-red-400 text-xs mt-1 hidden" role="status"></div>
+                </div>
+                <div class="mb-4">
+                    <label for="loginPassword" class="block text-slate-300 text-sm mb-2">Password</label>
+                    <div class="relative">
+                        <i class="fas fa-lock absolute left-3 top-1/2 -translate-y-1/2 text-copper-400"></i>
+                        <input type="password" id="loginPassword" name="password" autocomplete="current-password" class="w-full bg-midnight-900 border border-slate-700 rounded-sm pl-10 pr-10 py-3 text-white focus:outline-none focus:border-copper-400 transition-colors" required>
+                        <button type="button" onclick="togglePasswordVisibility('loginPassword')" class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-copper-400 focus:outline-none" aria-label="Toggle password visibility">
+                            <i class="fas fa-eye" id="loginPasswordIcon"></i>
+                        </button>
+                    </div>
+                    <div id="loginPasswordError" class="text-red-400 text-xs mt-1 hidden" role="status"></div>
+                </div>
+                <div class="flex justify-end mb-6">
+                    <a href="#" class="text-sm text-copper-400 hover:underline focus:outline-none focus:ring-2 focus:ring-copper-400 rounded-sm">Forgot password?</a>
+                </div>
+                <button type="submit" id="loginSubmitBtn" class="w-full bg-gradient-to-r from-copper-500 to-copper-400 text-midnight-900 py-3 rounded-sm font-bold tracking-wide hover:scale-105 transition-transform disabled:opacity-50 disabled:cursor-not-allowed" disabled>LOGIN</button>
+                <p class="text-center text-slate-400 text-sm mt-4">
+                    Don't have an account? <a href="#" onclick="showSignup()" class="text-copper-400 hover:underline focus:outline-none focus:ring-2 focus:ring-copper-400 rounded-sm">Sign up</a>
+                </p>
+            </form>
+            <div id="loginError" class="mt-4 text-red-400 text-sm hidden" role="alert"></div>
+        </div>
+    </div>
+
+    <!-- Signup Modal (Improved) -->
+    <div id="signupModal" class="fixed inset-0 bg-midnight-900/90 backdrop-blur-sm flex items-center justify-center z-50 hidden transition-opacity duration-300" role="dialog" aria-modal="true" aria-labelledby="signupTitle">
+        <div class="bg-midnight-800 border border-copper-400/30 rounded-lg p-8 max-w-md w-full mx-4 relative shadow-2xl transform transition-all duration-300 scale-95 opacity-0" id="signupModalContent">
+            <button onclick="closeModal('signupModal')" class="absolute top-4 right-4 text-slate-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-copper-400 rounded-sm" aria-label="Close">
+                <i class="fas fa-times text-xl"></i>
+            </button>
+            <h3 id="signupTitle" class="text-2xl font-serif font-bold text-white mb-6">Create Account</h3>
+            <form id="signupForm" novalidate>
+                <div class="mb-4">
+                    <label for="signupName" class="block text-slate-300 text-sm mb-2">Full Name</label>
+                    <div class="relative">
+                        <i class="fas fa-user absolute left-3 top-1/2 -translate-y-1/2 text-copper-400"></i>
+                        <input type="text" id="signupName" name="name" autocomplete="name" class="w-full bg-midnight-900 border border-slate-700 rounded-sm pl-10 pr-4 py-3 text-white focus:outline-none focus:border-copper-400 transition-colors" placeholder="John Doe" required>
+                    </div>
+                    <div id="signupNameError" class="text-red-400 text-xs mt-1 hidden" role="status"></div>
+                </div>
+                <div class="mb-4">
+                    <label for="signupEmail" class="block text-slate-300 text-sm mb-2">Email</label>
+                    <div class="relative">
+                        <i class="fas fa-envelope absolute left-3 top-1/2 -translate-y-1/2 text-copper-400"></i>
+                        <input type="email" id="signupEmail" name="email" autocomplete="email" class="w-full bg-midnight-900 border border-slate-700 rounded-sm pl-10 pr-4 py-3 text-white focus:outline-none focus:border-copper-400 transition-colors" placeholder="you@example.com" required>
+                    </div>
+                    <div id="signupEmailError" class="text-red-400 text-xs mt-1 hidden" role="status"></div>
+                </div>
+                <div class="mb-4">
+                    <label for="signupPassword" class="block text-slate-300 text-sm mb-2">Password</label>
+                    <div class="relative">
+                        <i class="fas fa-lock absolute left-3 top-1/2 -translate-y-1/2 text-copper-400"></i>
+                        <input type="password" id="signupPassword" name="password" autocomplete="new-password" class="w-full bg-midnight-900 border border-slate-700 rounded-sm pl-10 pr-10 py-3 text-white focus:outline-none focus:border-copper-400 transition-colors" required>
+                        <button type="button" onclick="togglePasswordVisibility('signupPassword')" class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-copper-400 focus:outline-none" aria-label="Toggle password visibility">
+                            <i class="fas fa-eye" id="signupPasswordIcon"></i>
+                        </button>
+                    </div>
+                    <div id="signupPasswordStrength" class="mt-2">
+                        <div class="flex space-x-1 h-1">
+                            <div class="strength-bar flex-1 bg-slate-600 rounded transition-all" id="strength1"></div>
+                            <div class="strength-bar flex-1 bg-slate-600 rounded transition-all" id="strength2"></div>
+                            <div class="strength-bar flex-1 bg-slate-600 rounded transition-all" id="strength3"></div>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-1" id="strengthText">Enter a password</p>
+                    </div>
+                    <div id="signupPasswordError" class="text-red-400 text-xs mt-1 hidden" role="status"></div>
+                </div>
+                <div class="mb-6">
+                    <label for="signupConfirmPassword" class="block text-slate-300 text-sm mb-2">Confirm Password</label>
+                    <div class="relative">
+                        <i class="fas fa-lock absolute left-3 top-1/2 -translate-y-1/2 text-copper-400"></i>
+                        <input type="password" id="signupConfirmPassword" name="confirmPassword" autocomplete="off" class="w-full bg-midnight-900 border border-slate-700 rounded-sm pl-10 pr-10 py-3 text-white focus:outline-none focus:border-copper-400 transition-colors" required>
+                        <button type="button" onclick="togglePasswordVisibility('signupConfirmPassword')" class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-copper-400 focus:outline-none" aria-label="Toggle password visibility">
+                            <i class="fas fa-eye" id="signupConfirmPasswordIcon"></i>
+                        </button>
+                    </div>
+                    <div id="signupConfirmError" class="text-red-400 text-xs mt-1 hidden" role="status"></div>
+                </div>
+                <button type="submit" id="signupSubmitBtn" class="w-full bg-gradient-to-r from-copper-500 to-copper-400 text-midnight-900 py-3 rounded-sm font-bold tracking-wide hover:scale-105 transition-transform disabled:opacity-50 disabled:cursor-not-allowed" disabled>SIGN UP</button>
+                <p class="text-center text-slate-400 text-sm mt-4">
+                    Already have an account? <a href="#" onclick="showLogin()" class="text-copper-400 hover:underline focus:outline-none focus:ring-2 focus:ring-copper-400 rounded-sm">Log in</a>
+                </p>
+            </form>
+            <div id="signupError" class="mt-4 text-red-400 text-sm hidden" role="alert"></div>
+        </div>
+    </div>
+
+    <script>
+        // ========== SECURITY & UI ENHANCEMENTS ==========
+
+        // Toggle password visibility
+        function togglePasswordVisibility(fieldId) {
+            const field = document.getElementById(fieldId);
+            const icon = document.getElementById(fieldId + 'Icon');
+            if (field.type === 'password') {
+                field.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                field.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        }
+
+        // Password strength meter
+        function checkPasswordStrength(password) {
+            let strength = 0;
+            if (password.length >= 8) strength++;
+            if (/[A-Z]/.test(password)) strength++;
+            if (/[0-9]/.test(password)) strength++;
+            if (/[^A-Za-z0-9]/.test(password)) strength++;
+            return strength;
+        }
+
+        function updateStrengthMeter(password) {
+            const strength = checkPasswordStrength(password);
+            const bars = ['strength1', 'strength2', 'strength3'];
+            const colors = ['bg-red-500', 'bg-yellow-500', 'bg-green-500'];
+            const texts = ['Weak', 'Medium', 'Strong'];
+            
+            bars.forEach((id, index) => {
+                const bar = document.getElementById(id);
+                bar.classList.remove('bg-red-500', 'bg-yellow-500', 'bg-green-500', 'bg-slate-600');
+                if (index < strength) {
+                    bar.classList.add(colors[strength - 1]);
+                } else {
+                    bar.classList.add('bg-slate-600');
+                }
+            });
+            
+            const strengthText = document.getElementById('strengthText');
+            if (password.length === 0) {
+                strengthText.textContent = 'Enter a password';
+            } else if (strength === 1) {
+                strengthText.textContent = 'Weak password';
+            } else if (strength === 2) {
+                strengthText.textContent = 'Medium password';
+            } else if (strength >= 3) {
+                strengthText.textContent = 'Strong password';
+            }
+        }
+
+        // Real-time validation for signup
+        function validateSignupField(field) {
+            const value = field.value.trim();
+            const errorDiv = document.getElementById(`signup${field.id.replace('signup', '')}Error`);
+            
+            switch (field.id) {
+                case 'signupName':
+                    if (value.length < 2) {
+                        errorDiv.textContent = 'Name must be at least 2 characters.';
+                        errorDiv.classList.remove('hidden');
+                        return false;
+                    }
+                    break;
+                case 'signupEmail':
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(value)) {
+                        errorDiv.textContent = 'Please enter a valid email address.';
+                        errorDiv.classList.remove('hidden');
+                        return false;
+                    }
+                    break;
+                case 'signupPassword':
+                    if (value.length < 8) {
+                        errorDiv.textContent = 'Password must be at least 8 characters.';
+                        errorDiv.classList.remove('hidden');
+                        return false;
+                    }
+                    updateStrengthMeter(value);
+                    break;
+                case 'signupConfirmPassword':
+                    const password = document.getElementById('signupPassword').value;
+                    if (value !== password) {
+                        errorDiv.textContent = 'Passwords do not match.';
+                        errorDiv.classList.remove('hidden');
+                        return false;
+                    }
+                    break;
+            }
+            errorDiv.classList.add('hidden');
+            return true;
+        }
+
+        // Enable/disable submit buttons based on all fields validity
+        function toggleSignupButton() {
+            const name = document.getElementById('signupName').value.trim();
+            const email = document.getElementById('signupEmail').value.trim();
+            const password = document.getElementById('signupPassword').value;
+            const confirm = document.getElementById('signupConfirmPassword').value;
+            const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+            const passwordValid = password.length >= 8 && checkPasswordStrength(password) >= 1; // at least weak
+            const nameValid = name.length >= 2;
+            const confirmValid = password === confirm;
+            
+            document.getElementById('signupSubmitBtn').disabled = !(nameValid && emailValid && passwordValid && confirmValid);
+        }
+
+        function toggleLoginButton() {
+            const email = document.getElementById('loginEmail').value.trim();
+            const password = document.getElementById('loginPassword').value;
+            const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+            document.getElementById('loginSubmitBtn').disabled = !(emailValid && password.length > 0);
+        }
+
+        // Smooth modal open animation
+        function openModal(id) {
+            const modal = document.getElementById(id);
+            const content = document.getElementById(id + 'Content');
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                content.classList.remove('scale-95', 'opacity-0');
+                content.classList.add('scale-100', 'opacity-100');
+            }, 10);
+            // Focus first input for accessibility
+            setTimeout(() => {
+                const firstInput = modal.querySelector('input');
+                if (firstInput) firstInput.focus();
+            }, 100);
+        }
+
+        function closeModal(id) {
+            const modal = document.getElementById(id);
+            const content = document.getElementById(id + 'Content');
+            content.classList.add('scale-95', 'opacity-0');
+            content.classList.remove('scale-100', 'opacity-100');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+
+        // ========== EXISTING SCRIPT (MODIFIED TO USE NEW FUNCTIONS) ==========
+
+        // API base URL (change in production)
+        const API_URL = 'http://localhost:5000/api'; 
+        let currentUser = null;
+
+        // Check if user is logged in
+        const token = localStorage.getItem('token');
+        if (token) {
+            fetch(`${API_URL}/auth/me`, {
+                headers: { 'x-auth-token': token }
+            })
+            .then(res => {
+                if (!res.ok) throw new Error('Not authenticated');
+                return res.json();
+            })
+            .then(user => {
+                currentUser = user;
+                updateUIForLoggedInUser(user);
+            })
+            .catch(() => {
+                localStorage.removeItem('token');
+            });
+        }
+
+        function updateUIForLoggedInUser(user) {
+            // Change all login/access buttons to go to dashboard
+            document.querySelectorAll('[data-action="open-login"], [data-action="open-signup"]').forEach(btn => {
+                btn.setAttribute('href', '/dashboard.html');
+                btn.innerText = 'GO TO DASHBOARD';
+                btn.removeAttribute('data-action');
+            });
+        }
+
+        function showLogin() {
+            closeModal('signupModal');
+            openModal('loginModal');
+        }
+
+        function showSignup() {
+            closeModal('loginModal');
+            openModal('signupModal');
+        }
+
+        // Attach modal triggers
+        document.querySelectorAll('[data-action="open-login"]').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                // If user already logged in, redirect to dashboard
+                if (currentUser) {
+                    window.location.href = '/dashboard.html';
+                } else {
+                    openModal('loginModal');
+                }
+            });
+        });
+
+        document.querySelectorAll('[data-action="open-signup"]').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                // Save selected plan in localStorage
+                const plan = btn.getAttribute('data-plan');
+                if (plan) {
+                    localStorage.setItem('selectedPlan', plan);
+                }
+                if (currentUser) {
+                    // User already logged in, redirect to checkout/payment page (to be implemented)
+                    alert(`You selected ${plan} plan. Payment integration coming soon.`);
+                } else {
+                    openModal('signupModal');
+                }
+            });
+        });
+
+        // Login form submission
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+            const errorDiv = document.getElementById('loginError');
+            errorDiv.classList.add('hidden');
+
+            try {
+                const res = await fetch(`${API_URL}/auth/login`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email, password })
+                });
+                const data = await res.json();
+                if (!res.ok) throw new Error(data.msg || 'Login failed');
+
+                localStorage.setItem('token', data.token);
+                currentUser = data.user;
+                closeModal('loginModal');
+                // After login, if there was a selected plan, handle it
+                const selectedPlan = localStorage.getItem('selectedPlan');
+                if (selectedPlan) {
+                    // Redirect to payment page (placeholder)
+                    alert(`You selected ${selectedPlan} plan. Please complete payment.`);
+                    localStorage.removeItem('selectedPlan');
+                } else {
+                    window.location.href = '/dashboard.html';
+                }
+            } catch (err) {
+                errorDiv.textContent = err.message;
+                errorDiv.classList.remove('hidden');
+            }
+        });
+
+        // Signup form submission
+        document.getElementById('signupForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const name = document.getElementById('signupName').value;
+            const email = document.getElementById('signupEmail').value;
+            const password = document.getElementById('signupPassword').value;
+            const errorDiv = document.getElementById('signupError');
+            errorDiv.classList.add('hidden');
+
+            try {
+                const res = await fetch(`${API_URL}/auth/register`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, email, password })
+                });
+                const data = await res.json();
+                if (!res.ok) throw new Error(data.msg || 'Signup failed');
+
+                localStorage.setItem('token', data.token);
+                currentUser = data.user;
+                closeModal('signupModal');
+                // After signup, if there was a selected plan, handle it
+                const selectedPlan = localStorage.getItem('selectedPlan');
+                if (selectedPlan) {
+                    // Redirect to payment page (placeholder)
+                    alert(`You selected ${selectedPlan} plan. Please complete payment.`);
+                    localStorage.removeItem('selectedPlan');
+                } else {
+                    window.location.href = '/dashboard.html';
+                }
+            } catch (err) {
+                errorDiv.textContent = err.message;
+                errorDiv.classList.remove('hidden');
+            }
+        });
+
+        // Smooth scroll and other existing functions (keep as is)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-lg', 'bg-midnight-900/95');
+                nav.classList.remove('glass-midnight');
+            } else {
+                nav.classList.remove('shadow-lg', 'bg-midnight-900/95');
+                nav.classList.add('glass-midnight');
+            }
+        });
+
+        // FAQ toggle
+        window.toggleFaq = function(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            content.classList.toggle('hidden');
+            if (content.classList.contains('hidden')) {
+                icon.classList.remove('fa-minus');
+                icon.classList.add('fa-plus');
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                icon.classList.remove('fa-plus');
+                icon.classList.add('fa-minus');
+                icon.style.transform = 'rotate(180deg)';
+            }
+        };
+
+        // Counter animation
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+        const animateCounters = () => {
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const inc = target / speed;
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + inc);
+                    setTimeout(animateCounters, 20);
+                } else {
+                    counter.innerText = target.toLocaleString() + (target > 100 ? '+' : '%');
+                }
+            });
+        };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+        if (document.querySelector('.counter')) {
+            observer.observe(document.querySelector('.counter').parentElement.parentElement);
+        }
+
+        // Attach validation event listeners after DOM is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            // Signup fields
+            ['signupName', 'signupEmail', 'signupPassword', 'signupConfirmPassword'].forEach(id => {
+                const field = document.getElementById(id);
+                if (field) {
+                    field.addEventListener('input', function() {
+                        validateSignupField(this);
+                        toggleSignupButton();
+                    });
+                }
+            });
+            
+            // Login fields
+            ['loginEmail', 'loginPassword'].forEach(id => {
+                const field = document.getElementById(id);
+                if (field) {
+                    field.addEventListener('input', function() {
+                        // Simple email validation
+                        if (id === 'loginEmail') {
+                            const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.value);
+                            const errorDiv = document.getElementById('loginEmailError');
+                            if (!emailValid && this.value.length > 0) {
+                                errorDiv.textContent = 'Invalid email format.';
+                                errorDiv.classList.remove('hidden');
+                            } else {
+                                errorDiv.classList.add('hidden');
+                            }
+                        }
+                        toggleLoginButton();
+                    });
+                }
+            });
+            
+            // Password strength updates on password field
+            const pwdField = document.getElementById('signupPassword');
+            if (pwdField) {
+                pwdField.addEventListener('input', function() {
+                    updateStrengthMeter(this.value);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
